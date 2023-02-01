@@ -1,0 +1,60 @@
+@import "vars";
+
+.btn {
+    width: 250px;
+    padding: 16px 0;
+    font-weight: 400;
+    font-family: $generalFont;
+    background-color: $bgColor_dark;
+    color: $textColor;
+    border-radius: 200px;
+    font-size: 30px;
+    line-height: 30px;
+}
+
+.btn_smaller {
+    width: 220px;
+    padding: 20px 0;
+    // font-weight: 400;
+    // font-family: $generalFont;
+    // background-color: $bgColor_dark;
+    // color: $textColor;
+    // border-radius: 200px;
+    font-size: 22px;
+    line-height: 22px;
+}
+
+.btn_white {
+    background-color: $bgColor;
+    color: $textColor_dark;
+}
+
+@media screen and (max-width: $tablet) {
+    .btn {
+        width: 160px;
+        padding: 14px 0;
+        font-size: 17px;
+        line-height: 20px;
+    }
+    
+}
+
+@media screen and (max-width: $mobile) {
+    .btn {
+        width: 90px;
+        padding: 3px 0;
+        font-size: 12px;
+        line-height: 20px;
+    }
+    
+}
+
+@media screen and (orientation:landscape)
+and (max-width: $landscape) and (max-height: 590px) {
+    .btn {
+        width: 90px;
+        padding: 3px 0;
+        font-size: 12px;
+        line-height: 20px;
+    }
+}

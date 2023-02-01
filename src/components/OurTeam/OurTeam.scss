@@ -1,0 +1,553 @@
+@import "../../styles/_vars.scss";
+
+.team {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: $bgColor_dark;
+  overflow: hidden;
+}
+
+.team__inner {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  height: var(--doc-height);
+  max-height: 100vh;
+  padding-top: 100px;
+  .team__title {
+    margin-top: 3vh;
+    margin-bottom: 5vh;
+    color: $textColor;
+  }
+  .team__slider {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    .team__sliderBtn {
+      width: 52px;
+      height: 52px;
+    }
+    .team__arrowIcon {
+      width: auto;
+    }
+  }
+  .team__box {
+    height: 65vh;
+    max-height: 510px;
+    width: 982px;
+    background-color: $bgColor;
+    border-radius: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: $textColor_dark;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    .employee {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .employee__imgWrapper {
+        width: 140px;
+        height: 140px;
+        .employee__img {
+          width: 100%;
+        }
+      }
+      .employee__name {
+        font-size: 25px;
+        font-weight: 600;
+        line-height: 25px;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        text-align: center;
+      }
+      .employee__profession {
+        font-size: 19px;
+        font-weight: 400;
+        line-height: 19px;
+      }
+    }
+  }
+  .team__boxFive {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .team__boxFour {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-left: 76px;
+    padding-right: 76px;
+  }
+}
+
+@media screen and (max-width: $desktop) {
+  .team__inner {
+    .team__box {
+      height: 65vh;
+      max-height: 460px;
+      width: 882px;
+      .employee {
+        .employee__imgWrapper {
+          width: 110px;
+          height: 110px;
+        }
+        .employee__name {
+          font-size: 21px;
+          font-weight: 600;
+          line-height: 21px;
+          margin-top: 10px;
+          margin-bottom: 5px;
+        }
+        .employee__profession {
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 16px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $tablet) and (max-width: 1010px) {
+  .team__boxFive {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .team__inner {
+    align-items: center;
+    padding-top: 70px;
+    .team__title {
+      margin-top: 50px;
+      margin-bottom: 20vh;
+    }
+    .team__slider {
+      .team__sliderBtn {
+        width: 32px;
+        height: 32px;
+      }
+    }
+    .team__box {
+      height: 343px;
+      width: 624px;
+      .employee {
+        .employee__imgWrapper {
+          width: 110px;
+          height: 110px;
+        }
+        .employee__name {
+          font-size: 17px;
+          font-weight: 600;
+          line-height: 17px;
+          margin-top: 6px;
+          margin-bottom: 6px;
+        }
+        .employee__profession {
+          font-size: 13px;
+          font-weight: 400;
+          line-height: 13px;
+        }
+      }
+    }
+    .team__boxFive {
+      padding-top: 30px;
+      padding-bottom: 30px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    .team__boxFour {
+      padding-top: 30px;
+      padding-bottom: 30px;
+      padding-left: 47px;
+      padding-right: 47px;
+    }
+  }
+}
+
+@media screen and (min-width: 850px) {
+  .team__boxFive {
+    .secondEmployee,
+    .fourthEmployee {
+      align-self: flex-end !important;
+    }
+  }
+  .team__boxFour {
+    .firstEmployee,
+    .thirdEmployee {
+      align-self: flex-end !important;
+    }
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .team__inner {
+    align-items: center;
+    padding-top: 70px;
+    .team__title {
+      margin-top: 50px;
+      margin-bottom: 20vh;
+    }
+    .team__slider {
+      .team__sliderBtn {
+        width: 32px;
+        height: 32px;
+      }
+    }
+    .team__box {
+      box-sizing: border-box;
+      height: 55vw;
+      min-height: 181px;
+      max-height: 343px;
+      width: 75vw;
+      min-width: 235px;
+      max-width: 624px;
+      border-radius: 50px;
+
+      .employee {
+        .employee__imgWrapper {
+          width: 110px;
+          height: 110px;
+        }
+        .employee__name {
+          font-size: 17px;
+          font-weight: 600;
+          line-height: 17px;
+          margin-top: 6px;
+          margin-bottom: 6px;
+        }
+        .employee__profession {
+          font-size: 13px;
+          font-weight: 400;
+          line-height: 13px;
+        }
+      }
+    }
+    .team__boxFive {
+      padding-top: 18px;
+      padding-bottom: 18px;
+      padding-left: 20px;
+      padding-right: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      align-content: space-between;
+      .firstEmployee,
+      .secondEmployee,
+      .thirdEmployee {
+        flex-basis: calc(100% / 3);
+      }
+      .fourthEmployee,
+      .fifthEmployee {
+        flex-basis: calc(100% / 2);
+        align-self: flex-end !important;
+      }
+      .firstEmployee {
+        padding-right: calc(100% / 3 - 110px);
+      }
+      .thirdEmployee {
+        padding-left: calc(100% / 3 - 110px);
+      }
+      .fourthEmployee {
+        padding-left: calc(100% / 10);
+      }
+      .fifthEmployee {
+        padding-right: calc(100% / 10);
+      }
+    }
+    .team__boxFour {
+      padding-top: 18px;
+      padding-bottom: 18px;
+      padding-left: 47px;
+      padding-right: 47px;
+      .firstEmployee,
+      .thirdEmployee {
+        align-self: flex-end !important;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $smallTablet) and (max-width: 700px) {
+  .team__boxFour {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    .firstEmployee,
+    .secondEmployee {
+      flex-basis: calc(100% / 2);
+      align-self: flex-end !important;
+    }
+    .thirdEmployee,
+    .fourthEmployee {
+      flex-basis: calc(100% / 2);
+      align-self: flex-start !important;
+    }
+    .firstEmployee,
+    .secondEmployee {
+      padding-left: calc(100% / 2 - 110px);
+    }
+    .thirdEmployee,
+    .fourthEmployee {
+      padding-right: calc(100% / 2 - 110px);
+    }
+  }
+}
+
+@media screen and (max-width: $smallTablet),
+  screen and (orientation: landscape) and (max-width: $landscape) and (min-height: 590px) and (max-height: 750px) {
+  .team__inner {
+    align-items: center;
+    padding-top: 70px;
+    .team__title {
+      margin-top: 30px;
+      margin-bottom: 10vh;
+    }
+    .team__slider {
+      .team__sliderBtn {
+        width: 12px;
+        height: 12px;
+      }
+    }
+    .team__box {
+      height: 55vw;
+      min-height: 181px;
+      max-height: 251px;
+
+      width: 75vw;
+      min-width: 235px;
+      max-width: 435px;
+      border-radius: 30px;
+      margin-left: 8px;
+      margin-right: 8px;
+
+      .employee {
+        .employee__imgWrapper {
+          width: 70px;
+          height: 70px;
+        }
+        .employee__name {
+          font-size: 13px;
+          font-weight: 600;
+          line-height: 13px;
+          margin-top: 3px;
+          margin-bottom: 0px;
+        }
+        .employee__profession {
+          font-size: 11px;
+          font-weight: 400;
+          line-height: 11px;
+        }
+      }
+    }
+    .team__boxFive {
+      padding-top: 18px;
+      padding-bottom: 18px;
+      padding-left: 6px;
+      padding-right: 6px;
+      display: flex;
+      flex-wrap: wrap;
+      align-content: space-between;
+      .firstEmployee,
+      .secondEmployee,
+      .thirdEmployee {
+        flex-basis: calc(100% / 3);
+      }
+      .fourthEmployee,
+      .fifthEmployee {
+        flex-basis: calc(100% / 2);
+        align-self: flex-end !important;
+      }
+      .firstEmployee {
+        padding-right: calc(100% / 3 - 110px);
+      }
+      .thirdEmployee {
+        padding-left: calc(100% / 3 - 110px);
+      }
+      .fourthEmployee {
+        padding-left: calc(100% / 10);
+      }
+      .fifthEmployee {
+        padding-right: calc(100% / 10);
+      }
+    }
+    .team__boxFour {
+      padding-top: 18px;
+      padding-bottom: 18px;
+      padding-left: 26px;
+      padding-right: 26px;
+      display: flex;
+      flex-wrap: wrap;
+      align-content: space-between;
+      .firstEmployee,
+      .secondEmployee {
+        flex-basis: calc(100% / 2);
+        align-self: flex-end !important;
+      }
+      .thirdEmployee,
+      .fourthEmployee {
+        flex-basis: calc(100% / 2);
+        align-self: flex-start !important;
+      }
+      .firstEmployee,
+      .secondEmployee {
+        padding-left: calc(100% / 2 - 110px);
+      }
+      .thirdEmployee,
+      .fourthEmployee {
+        padding-right: calc(100% / 2 - 110px);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $mobile),
+  screen and (orientation: landscape) and (max-width: $landscape) and (max-height: 590px) {
+  .team__inner {
+    align-items: center;
+    padding-top: 47px;
+    .team__title {
+      margin-top: 30px;
+      margin-bottom: 10vh;
+    }
+    .team__slider {
+      .team__sliderBtn {
+        width: 12px;
+        height: 12px;
+      }
+    }
+    .team__box {
+      height: 181px;
+      width: 75vw;
+      min-width: 235px;
+      max-width: 335px;
+      border-radius: 30px;
+      margin-left: 8px;
+      margin-right: 8px;
+
+      .employee {
+        .employee__imgWrapper {
+          width: 40px;
+          height: 40px;
+        }
+        .employee__name {
+          font-size: 10px;
+          font-weight: 600;
+          line-height: 10px;
+          margin-top: 3px;
+          margin-bottom: 0px;
+        }
+        .employee__profession {
+          font-size: 9px;
+          font-weight: 400;
+          line-height: 9px;
+        }
+      }
+    }
+    .team__boxFive {
+      padding-top: 18px;
+      padding-bottom: 18px;
+      padding-left: 6px;
+      padding-right: 6px;
+      display: flex;
+      flex-wrap: wrap;
+      align-content: space-between;
+      .firstEmployee,
+      .secondEmployee,
+      .thirdEmployee {
+        flex-basis: calc(100% / 3);
+      }
+      .fourthEmployee,
+      .fifthEmployee {
+        flex-basis: calc(100% / 2);
+        align-self: flex-end !important;
+      }
+      .firstEmployee {
+        padding-right: calc(100% / 3 - 65px);
+      }
+      .thirdEmployee {
+        padding-left: calc(100% / 3 - 65px);
+      }
+      .fourthEmployee {
+        padding-left: calc(100% / 10);
+      }
+      .fifthEmployee {
+        padding-right: calc(100% / 10);
+      }
+    }
+    .team__boxFour {
+      padding-top: 18px;
+      padding-bottom: 18px;
+      padding-left: 26px;
+      padding-right: 26px;
+      display: flex;
+      flex-wrap: wrap;
+      align-content: space-between;
+      .firstEmployee,
+      .secondEmployee {
+        flex-basis: calc(100% / 2);
+        align-self: flex-end !important;
+      }
+      .thirdEmployee,
+      .fourthEmployee {
+        flex-basis: calc(100% / 2);
+        align-self: flex-start !important;
+      }
+      .firstEmployee,
+      .secondEmployee {
+        padding-left: 0px;
+        padding-right: calc(100% / 2 - 65px);
+      }
+      .thirdEmployee,
+      .fourthEmployee {
+        padding-right: 0px;
+        padding-left: calc(100% / 2 - 65px);
+      }
+    }
+  }
+}
+
+@media screen and (orientation: portrait) and (max-width: $smallTablet) {
+  .team__inner {
+    .team__title {
+      margin-bottom: 20vh;
+    }
+  }
+}
+
+@media screen and (orientation: landscape) and (max-width: $landscape) and (max-height: 340px) {
+  .team__inner {
+    .team__title {
+      margin-top: 0px;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+@media screen and (orientation: landscape) and (max-width: $landscape) and (max-height: 270px) {
+  .team__inner {
+    .team__title {
+      margin-top: 0px;
+      margin-bottom: 15px;
+    }
+    .team__box {
+      min-height: 140px !important;
+      height: 60vh;
+    }
+    .team__boxFive {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+    .team__boxFour {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  }
+}

@@ -1,0 +1,7 @@
+@import "../../styles/_vars.scss";
+
+.homePage {
+    height: var(--doc-height);
+    max-height: 100vh;
+    overflow: hidden;
+}

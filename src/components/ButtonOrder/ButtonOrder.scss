@@ -1,0 +1,103 @@
+@import "../../styles/_vars.scss";
+
+.buttonOrderWrapper {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-justify-content: center;
+  -webkit-align-items: center;
+  box-shadow: none;
+}
+
+.buttonOrder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-justify-content: center;
+  -webkit-align-items: center;
+}
+
+.buttonOrder_active {
+  transform: translateX(200%);
+  transition: transform 200ms ease 100ms;
+}
+
+.buttonOrder__arrowWrapper {
+  display: flex;
+  align-items: center;
+  width: 0;
+  height: 16px;
+  transform: translateY(3px);
+  overflow: hidden;
+}
+
+.buttonOrderWrapper:hover .buttonOrder__arrowWrapper {
+  width: 28px;
+  margin-left: 31px;
+  transition: width 0.1s ease-in-out;
+}
+
+.buttonOrder__arrow {
+  width: 100%;
+  fill: $bgColor;
+}
+
+.buttonOrder__arrow_white {
+  fill: $bgColor_dark;
+}
+
+@media screen and (max-width: $tablet) {
+  .buttonOrder__arrowWrapper {
+    height: 12px;
+    transform: translateY(0px);
+    overflow: hidden;
+  }
+
+  .buttonOrderWrapper:hover .buttonOrder__arrowWrapper {
+    width: 0;
+    height: 12px;
+    overflow: hidden;
+    margin-left: 0px;
+    transition: none;
+  }
+
+  .buttonOrderWrapper .buttonOrder_active .buttonOrder__arrowWrapper {
+    width: 16px;
+    margin-left: 23px;
+    overflow: visible;
+    transition: width 0.1s ease-in-out;
+  }
+}
+
+@media screen and (max-width: $mobile) {
+    .buttonOrder__arrowWrapper {
+        height: 10px;
+      }
+    
+      .buttonOrderWrapper:hover .buttonOrder__arrowWrapper {
+        width: 0;
+        height: 10px;
+      }
+
+    .buttonOrderWrapper .buttonOrder_active .buttonOrder__arrowWrapper {
+        width: 12px;
+        margin-left: 11px;
+      }
+}
+
+@media screen and (orientation: landscape) and (max-width: $landscape) and (max-height: 590px) {
+    .buttonOrder__arrowWrapper {
+        height: 10px;
+      }
+    
+      .buttonOrderWrapper:hover .buttonOrder__arrowWrapper {
+        width: 0;
+        height: 10px;
+      }
+
+    .buttonOrderWrapper .buttonOrder_active .buttonOrder__arrowWrapper {
+        width: 12px;
+        margin-left: 11px;
+      }
+}

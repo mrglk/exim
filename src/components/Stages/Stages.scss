@@ -1,0 +1,239 @@
+@import "../../styles/_vars.scss";
+
+.stages__mobile_visible {
+    display: none;
+}
+
+.stages {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: $bgColor;
+    border-top: none;
+    overflow: hidden;
+}
+
+.stages__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100vh;
+    height: var(--doc-height);
+    max-height: 100vh;
+}
+
+.stages__header {
+    text-align: end;
+    margin-bottom: 5px;
+}
+
+.stages__stages {
+    margin-bottom: 40px;
+}
+
+.stages__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+
+    &:not(:last-child) {
+        margin-bottom: 30px;
+        border-bottom: 3px solid $textColor_dark;
+    }
+}
+
+.stages__number {
+    min-width: 82px;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 40px;
+    margin-right: 10px;
+}
+
+.stages__subtitleWrapper {
+    display: flex;
+    align-items: flex-start;
+    min-width: 230px;
+    margin-right: 10px;
+}
+
+.stages__subtitle {
+    font-size: 23px;
+    line-height: 23px;
+}
+
+.stages__description {
+    width: 530px;
+    font-size: 15px;
+    line-height: 15px;
+}
+
+@media screen and (max-width: $desktop) and (max-height: 670px) {
+    .stages__stages {
+        margin-bottom: 20px;
+    }
+
+    .stages__item {
+        padding-bottom: 15px;
+    
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
+  }
+
+@media screen and (max-width: $tablet) {
+    .stages__header {
+        text-align: center;
+    }
+
+    .stages__stages {
+        margin-bottom: 36px;
+    }
+    
+    .stages__item {
+        padding-bottom: 15px;
+    
+        &:not(:last-child) {
+            margin-bottom: 30px;
+            border-width: 1px;
+        }
+    }
+    .stages__description {
+        max-width: 300px;
+    }
+}
+
+@media screen and (max-width: $smallTablet) {
+    .stages__mobile_visible {
+        display: inline;
+    }
+
+    .stages__number {
+        font-size: 45px;
+        line-height: 20px;
+    }
+
+    .stages__item {
+        padding-bottom: 8px;
+    
+        &:not(:last-child) {
+            margin-bottom: 8px;
+        }
+    }
+
+    .stages__subtitleWrapper {
+        min-width: 180px;
+    }
+
+    .stages__subtitle {
+        font-size: 18px;
+        line-height: 18px;
+    }
+
+    .stages__description {
+        font-size: 12px;
+        line-height: 12px;
+    }
+}
+
+@media screen and (max-width: $mobile) {
+    .stages {
+        border-width: 1px;
+    }
+    
+    .stages__stages {
+        margin-bottom: 36px;
+        margin-bottom: 10px;
+    }
+    
+    .stages__item {
+        padding-bottom: 8px;
+    
+        &:not(:last-child) {
+            margin-bottom: 8px;
+        }
+    }
+    
+    .stages__number {
+        min-width: 21px;
+        font-size: 20px;
+        line-height: 20px;
+    }
+
+    .stages__subtitleWrapper {
+        min-width: 90px;
+    }
+    
+    .stages__subtitle {
+        font-size: 12px;
+        line-height: 12px;
+    }
+    
+    .stages__description {
+        max-width: 144px;
+        font-size: 9px;
+        line-height: 9px;
+    }
+}
+
+@media screen and (orientation: landscape) and (max-width: $landscape) and (max-height: 590px) {
+    .stages__header {
+        text-align: end;
+        margin-bottom: -10px;
+    }
+    .stages__stages {
+        margin-bottom: 5px;
+    }
+    
+    .stages__item {
+        padding-bottom: 5px;
+    
+        &:not(:last-child) {
+            margin-bottom: 5px;
+        }
+    }
+    
+    .stages__number {
+        min-width: 21px;
+        font-size: 20px;
+        line-height: 20px;
+    }
+
+    .stages__subtitleWrapper {
+        min-width: 90px;
+    }
+    
+    .stages__subtitle {
+        font-size: 12px;
+        line-height: 12px;
+    }
+    
+    .stages__description {
+        max-width: 202px;
+        font-size: 9px;
+        line-height: 9px;
+    }
+}
+
+@media screen and (orientation: landscape) and (max-width: $landscapeMiddle) and (max-height: 282px) {
+
+    .stages__item:not(:last-child) {
+        margin-bottom: 3px;
+    }
+
+    .stages__description {
+        font-size: 7px;
+        line-height: 7px;
+    }
+    .stages__stages {
+        margin-bottom: 0px;
+    }
+
+    .stages__number {
+        font-size: 17px;
+        line-height: 16px;
+    }
+}

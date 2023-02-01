@@ -1,0 +1,225 @@
+@import "../../styles/_vars.scss";
+
+.header {
+    position: absolute;
+    height: 100px;
+  top: 0vh;
+  left: 0vw;
+  z-index: 2;
+//   mix-blend-mode: difference;
+// //   filter: invert(100%);
+}
+
+.header__inner {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+
+.header__burgerWrapper {
+    display: flex;
+    align-items: center;
+    width: 40px;
+    cursor: pointer;
+    z-index: 100;
+    mix-blend-mode: difference;
+}
+
+.header__burger {
+    width: 100%;
+    cursor: pointer;
+    // mix-blend-mode: difference;
+    // // filter: invert(100%);
+    // fill: $bgColor;
+
+    &_white {
+        fill: $bgColor;
+    }
+
+    &_black {
+        fill: $bgColor_dark;
+    }
+
+    &_hidden {
+        fill: transparent;
+    }
+}
+
+.header__overlay {
+    position: fixed;
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top:0;
+    z-index: 500;
+    background-color: hsla(0,0%,7%,.36);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.header__overlay_active {
+    opacity: 1;
+    background-color: hsla(0,0%,7%,.36);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    transition: opacity .8s ease,visibility 0s;
+}
+
+.header__navWrapper {
+    position: fixed;
+    display: flex;
+    justify-content: flex-start;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    right: 0;
+    top: 0;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease;
+    background-color: transparent;
+    // background-color: $bgColor;
+}
+
+.header__navWrapper_active{
+    transform: translateX(0);
+}
+
+.header__nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 650px;
+    height: 650px;
+    margin-top: 60px;
+    margin-left: -200px;
+    padding-left: 2vw;
+    border-radius: 500px;
+    // background-color: $bgColor;
+    // color: $textColor_dark;
+    // mix-blend-mode: difference;
+
+    &_white {
+        background-color: $bgColor;
+        & .header__link {
+            color: $textColor_dark;
+        }
+    }
+
+    &_black {
+        background-color: $bgColor_dark;
+        & .header__link {
+            color: $textColor;
+        }
+    }
+}
+
+.header__link {
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 52px;
+
+    &_bolder {
+        font-size: 23px;
+        font-weight: 700;
+    }
+}
+
+@media screen and (max-width: $tablet) {
+    .header {
+        height: 70px;
+    }
+
+    .header__burgerWrapper {
+        width: 31px;
+    }
+
+    .header__nav {
+        width: 500px;
+        height: 500px;
+        margin-top: 60px;
+        margin-left: -150px;
+        padding-left: 3vw;
+    }
+
+    .header__link {
+        font-size: 18px;
+        line-height: 50px;
+    
+        &_bolder {
+            font-size: 18px;
+        }
+    }
+}
+
+
+@media screen and (max-width: $mobile) {
+    .header {
+        height: 47px;
+    }
+
+    .header__burgerWrapper {
+        width: 16px;
+        height: 31px;
+    }
+
+    .header__nav {
+        width: 200px;
+        height: 200px;
+        margin-top: 30px;
+        margin-left: -60px;
+        padding-left: 6vw;
+        // border-radius: 500px;
+    }
+
+    .header__link {
+        font-size: 9px;
+        line-height: 20px;
+    
+        &_bolder {
+            font-size: 9px;
+        }
+    }
+}
+
+@media screen and (orientation:landscape)
+and (max-width: $landscape) and (max-height: 590px) {
+    .header {
+        height: 47px;
+    }
+
+    .header__burgerWrapper {
+        width: 16px;
+        height: 31px;
+    }
+
+    .header__nav {
+        width: 250px;
+        height: 250px;
+        margin-top: 20px;
+        margin-left: -60px;
+        padding-left: 6vw;
+    }
+
+    .header__link {
+        font-size: 9px;
+        line-height: 20px;
+    
+        &_bolder {
+            font-size: 9px;
+        }
+    }
+}
+
+@media screen and (orientation: landscape) and (max-width: $landscapeMiddle) and (max-height: 270px) {
+    .header__nav {
+        width: 220px;
+        height: 220px;
+        margin-top: 4px;
+    }
+}

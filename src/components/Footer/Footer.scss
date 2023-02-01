@@ -1,0 +1,366 @@
+@import "../../styles/_vars.scss";
+
+.footer__desktop_hidden,
+.footer__tablet_visible {
+  display: none;
+}
+.footer {
+  display: flex;
+  justify-content: center;
+  flex: 0 0 auto;
+  background-color: $bgColor_dark;
+  color: $textColor;
+  height: 360px;
+  width: 100%;
+}
+.footer_fixed {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 78px;
+  padding-bottom: 40px;
+}
+
+.footer__logoWrapper {
+  cursor: pointer;
+  width: 250px;
+  margin-bottom: 74px;
+}
+
+.footer__logo {
+  width: 100%;
+}
+
+.footer__tel {
+  font-size: 25px;
+}
+
+.footer__tel,
+.footer__mail {
+  color: $textColor;
+}
+
+.footer__content {
+  display: flex;
+  justify-content: space-between;
+  flex: 1 0 auto;
+}
+
+.footer__main {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.footer__nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer__side {
+  display: flex;
+  flex-direction: column;
+
+  &:first-child {
+    padding-right: 10px;
+  }
+}
+
+.footer__link {
+  cursor: pointer;
+  font-size: 20px;
+  color: $textColor;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  &_smaller {
+    font-size: 13px;
+    margin-top: 70px;
+  }
+}
+
+.footer__data {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  max-width: 350px;
+  height: 100%;
+  text-align: end;
+  margin-top: 30px;
+  font-size: 15px;
+  line-height: 27px;
+
+  &_bold {
+    font-weight: 600;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .footer__desktop_hidden,
+  .footer__tablet_visible {
+    display: block;
+  }
+
+  .footer__tablet_hidden {
+    display: none;
+  }
+  .footer {
+    height: 500px;
+  }
+
+  .footer__inner {
+    flex-direction: column;
+    padding-top: 56px;
+    padding-bottom: 44px;
+  }
+
+  .footer__logoWrapper {
+    width: 169px;
+    margin-bottom: 52px;
+  }
+
+  .footer__tel {
+    font-size: 28px;
+  }
+
+  .footer__content {
+    flex-direction: column;
+  }
+
+  .footer__main {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .footer__nav {
+    width: 96%;
+    justify-content: space-between;
+  }
+
+  .footer__dataAndAdditionalLinks {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: -50px;
+  }
+
+  .footer__link {
+    font-size: 23px;
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+
+    &_smaller {
+      font-size: 15px;
+      line-height: 20px;
+      margin-top: 0;
+
+      &:first-child {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .footer__data {
+    margin-top: 0;
+    font-size: 18px;
+    line-height: 32px;
+  }
+}
+@media screen and (max-width: 670px) {
+    .footer {
+        height: 430px;
+    }
+
+  .footer__tel {
+    font-size: 18px;
+  }
+  .footer__data {
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  .footer__link {
+    font-size: 16px;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    &_smaller {
+      font-size: 10px;
+      line-height: 14px;
+
+      &:first-child {
+        margin-bottom: 7px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .footer__tablet_visible, .footer__mobile_hidden {
+    display: none;
+  }
+
+  .footer__mobile_visible {
+    display: block;
+  }
+
+  .footer {
+    height: 299px;
+  }
+
+  .footer__inner {
+    padding-top: 28px;
+    padding-bottom: 33px;
+  }
+
+  .footer__logoAndTel {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footer__logoWrapper {
+    width: 80px;
+    margin-bottom: 24px;
+  }
+
+  .footer__tel {
+    font-size: 16px;
+  }
+  .footer__nav {
+    width: 100%;
+  }
+
+  .footer__dataAndAdditionalLinks {
+    border-top: 1px solid $textColor;
+    padding-top: 15px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer__link {
+    font-size: 12px;
+
+    &:not(:last-child) {
+      margin-bottom: 6px;
+    }
+
+    &_smaller {
+      font-size: 8px;
+      line-height: 8px;
+
+      &:first-child {
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+  .footer__data {
+    text-align: start;
+    align-items: flex-start;
+    margin-top: 10px;
+    font-size: 8px;
+    line-height: 14px;
+  }
+}
+
+
+@media screen and (orientation: landscape) and (max-width: $landscape) and (max-height: 590px) {
+    .footer__landscape_hidden {
+        display: none;
+    }
+    .footer__landscape_visible {
+        display: block;
+    }
+    .footer {
+        height: 200px;
+      }
+    
+      .footer__inner {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding-top: 28px;
+        padding-bottom: 23px;
+      }
+
+      .footer__logoAndTel {
+        flex-direction: column;
+        justify-content: flex-start;
+      }
+    
+      .footer__logoWrapper {
+        width: 110px;
+        margin-bottom: 8px;
+      }
+    
+      .footer__tel {
+        font-size: 16px;
+      }
+    
+      .footer__nav {
+        width: 100%;
+      }
+    
+      .footer__dataAndAdditionalLinks {
+        position: absolute;
+        padding-top: 10px;
+        align-items: flex-start;
+        border-top: 1px solid $textColor;
+        flex-direction: row-reverse;
+        bottom: 3vh;
+        left: 0;
+        width: 90%;
+        margin-left: 40px;
+        margin-right: 40px;
+      }
+    
+      .footer__link {
+        font-size: 12px;
+    
+        &:not(:last-child) {
+          margin-bottom: 8px;
+        }
+    
+        &_smaller {
+          font-size: 8px;
+          line-height: 8px;
+          margin-top: 0;
+    
+          &:first-child {
+            margin-bottom: 5px;
+          }
+        }
+      }
+    
+      .footer__data {
+        text-align: start;
+        align-items: flex-start;
+        margin-top: 0;
+        font-size: 8px;
+        line-height: 14px;
+      }
+}
+
+@media screen and (orientation: landscape) and (max-width: $landscapeMiddle){
+    .footer__tel {
+        font-size: 14px;
+      }
+
+      .footer__dataAndAdditionalLinks {
+        margin-left: 24px;
+        margin-right: 24px;
+      }
+
+}

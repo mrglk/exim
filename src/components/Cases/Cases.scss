@@ -1,0 +1,165 @@
+@import "../../styles/_vars.scss";
+
+.cases {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: $bgColor_dark;
+  color: $textColor;
+  overflow: hidden;
+}
+
+.cases__inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  height: var(--doc-height);
+  max-height: 100vh;
+}
+
+.cases__header {
+  text-align: center;
+  padding-top: 15vh;
+  padding-bottom: 7vh;
+}
+
+.cases__content {
+  margin-left: 10vw;
+}
+
+.cases__casesWrapper {
+  display: flex;
+  align-items: flex-end;
+}
+
+.cases__imgWrapper {
+  display: flex;
+  align-items: flex-end;
+  max-width: 600px;
+  flex-basis: 47%;
+
+  &:first-child {
+    margin-bottom: -200px;
+  }
+
+  &:last-child {
+    max-width: 700px;
+    padding-bottom: 10vh;
+    flex-basis: 53%;
+  }
+}
+
+.cases__img {
+  width: 100%;
+}
+
+@media screen and (max-width: $desktop) {
+  .cases__imgWrapper:first-child {
+    margin-bottom: -100px;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .cases__inner {
+    justify-content: space-between;
+  }
+  .cases__header {
+    padding-top: 11vh;
+  }
+
+  .cases__content {
+    margin-bottom: 12vh;
+    margin-left: 13vw;
+  }
+
+  .cases__casesWrapper {
+    width: 110vw;
+  }
+
+  .cases__imgWrapper {
+    display: flex;
+    align-items: flex-end;
+    max-width: 396px;
+
+    &:first-child {
+      margin-bottom: 0;
+    }
+
+    &:last-child {
+      max-width: 452px;
+      padding-bottom: 6vh;
+    }
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .cases__inner {
+    justify-content: flex-start;
+    width: 100vw;
+  }
+
+  .cases__content {
+    margin-left: 1vh;
+    margin-bottom: 5vh;
+    margin-top: 15vh;
+  }
+
+  .cases__header {
+    padding-top: 13vh;
+    padding-bottom: 12vh;
+  }
+
+  .cases__casesWrapper {
+    align-items: flex-start;
+    padding-bottom: 9vh;
+  }
+
+  .cases__imgWrapper {
+    align-items: flex-end;
+
+    &:first-child {
+      margin-bottom: 0;
+    }
+
+    &:last-child {
+      transform: translate(-8%, -50%);
+    }
+  }
+}
+
+@media screen and (max-width: $smallMobile) and (max-height: 460px){
+  .cases__header {
+    padding-top: 7vh;
+    padding-bottom: 11vh;
+}
+}
+
+@media screen and (orientation: landscape) and (max-width: $landscape) and (max-height: 590px) {
+  .cases__content {
+    margin-bottom: 0;
+    margin-left: 7vw;
+  }
+  .cases__casesWrapper {
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 0;
+  }
+
+  .cases__imgWrapper {
+    display: flex;
+    align-items: flex-end;
+    max-width: 150px;
+
+    &:first-child {
+      margin-bottom: 0;
+    }
+
+    &:last-child {
+      max-width: 224px;
+      padding-bottom: 6vh;
+    }
+  }
+}

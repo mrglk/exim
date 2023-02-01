@@ -1,0 +1,126 @@
+@import "../../styles/_vars.scss";
+
+.privacy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 400;
+    background-color: $bgColor_dark;
+    color: $textColor;
+    ul {
+        padding: 0;
+        list-style: none;
+    }
+    ul, li {
+        margin: 0;   
+    }
+    br {
+        display: none;
+    }
+    &__content {
+        padding-bottom: 162px;
+    }
+    &__list {
+        font-size: 24px;
+        line-height: 20px;
+        font-weight: 700;
+        padding-bottom: 50px;
+    }
+    &__listItem {
+        padding-bottom: 50px;
+    }
+    &__link {
+        display: inline;
+        color: $textColor;
+    }
+    &__address {
+        display: inline;
+        font-style: inherit;
+    }
+}
+@media screen and (max-width: $tablet) {
+    .privacy { 
+        font-size: 16px;
+        line-height: 16px;
+        br {
+            display: block;
+        }
+        &__content {
+            padding-bottom: 57px;
+        }
+        &__list {
+            font-size: 16px;
+            line-height: 16px;
+            padding-bottom: 16px;
+        }
+        &__listItem {
+            padding-bottom: 16px;
+        }     
+    }
+}
+
+@media screen and (max-width: $smallTablet) {
+    .privacy {
+        font-size: 12px;
+        line-height: 12px;
+        br {
+            display: none;
+        }
+        &__content {
+            padding-bottom: 62px;
+        }
+        &__list {
+            font-size: 12px;
+            line-height: 12px;
+            padding-bottom: 10px;
+        }
+        &__listItem {
+            padding-bottom: 10px;
+        }   
+    }
+}
+@media screen and (max-width: $mobile) {
+    .privacy {
+        font-size: 10px;
+        line-height: 10px;
+        br {
+            display: block;
+        }
+        &__content {
+            padding-bottom: 93px;
+        }
+        &__list {
+            font-size: 12px;
+            line-height: 12px;
+            padding-bottom: 10px;
+        }
+        &__listItem {
+            padding-bottom: 10px;
+        }   
+        &__text {
+            padding-bottom: 10px;
+        }
+    }
+}
+@media screen and (orientation: landscape) and (max-width: $landscape) and (max-height: 590px) {
+    .privacy {
+        font-size: 12px;
+        line-height: 12px;
+        br {
+            display: none;
+        }
+        &__content {
+            padding-bottom: 62px;
+        }
+        &__list {
+            font-size: 12px;
+            line-height: 12px;
+            padding-bottom: 10px;
+        }
+        &__listItem {
+            padding-bottom: 10px;
+        }    
+    }
+}
