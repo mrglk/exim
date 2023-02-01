@@ -10,6 +10,12 @@
 
 https://mrglk.github.io/exim/
 
+### Используемые технологии:
+
+* HTML5/СSS3
+* SCSS
+* React
+
 ### Запуск проекта
 
 ```
